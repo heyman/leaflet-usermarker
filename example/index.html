@@ -13,7 +13,7 @@
     
     <div id="controls">
         <div class="group">
-            <button id="marker-add">Add live updated marker</button><br>
+            <button id="marker-add">Add marker for your current position</button><br>
             <button id="marker-popup">Bind popup to marker</button><br>
             <button id="marker-remove">Remove marker</button>
         </div>
@@ -29,16 +29,29 @@
     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
     <script src="../src/leaflet.usermarker.js"></script>
     <script>
+        // initialize map
         var map = L.map('map').setView([38, 0], 2);
         L.tileLayer('http://{s}.tile.cloudmade.com/70146506bc514228adc1756788c730d3/997/256/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>',
             maxZoom: 18
         }).addTo(map);
         
-        // live marker
+        // marker for current position
         var marker = null;
         $("#marker-add").click(function() {
-            marker = L.liveUserMarker(map, {smallIcon:false, pulsing:true});
+            map.on("locationfound", function(location) {
+                if (!marker)
+                    marker = L.userMarker([0,0], {pulsing:true}).addTo(map);
+                
+                marker.setLatLng(location.latlng);
+                marker.setAccuracy(location.accuracy);
+            });
+            map.locate({
+                watch: false,
+                locate: true,
+                setView: true,
+                enableHighAccuracy: true
+            });
         });
         $("#marker-popup").click(function() {
             if (marker) {

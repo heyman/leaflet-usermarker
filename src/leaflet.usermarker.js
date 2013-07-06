@@ -38,25 +38,35 @@
         labelAnchor: [11, -3],
         html: '<i class="pulse"></i>'
     });
+    var circleStyle = {
+        stroke: true,
+        color: "#03f",
+        weight: 3,
+        opacity: 0.5,
+        fillOpacity: 0.15,
+        clickable: false
+    };
 
     L.UserMarker = L.Marker.extend({
         options: {
-            pulsing: false
+            pulsing: false,
+            smallIcon: false,
+            accuracy: 0
         },
 
         initialize: function(latlng, options) {
-            options = options || {};
-            if (options.smallIcon) {
-                options.icon = (options.pulsing ? iconPulsingSmall : iconSmall);
+            options = L.Util.setOptions(this, options);
+            
+            if (this.options.smallIcon) {
+                this.options.icon = (options.pulsing ? iconPulsingSmall : iconSmall);
             } else {
-                options.icon = (options.pulsing ? iconPulsing : icon);
+                this.options.icon = (options.pulsing ? iconPulsing : icon);
             }
             
-            var radius = (!!options ? options.accuracy || 0 : 0);
-            this._accMarker = L.circle(latlng, radius);
+            this._accMarker = L.circle(latlng, this.options.accuracy, circleStyle);
         
             // call super
-            L.Marker.prototype.initialize.call(this, latlng, options);
+            L.Marker.prototype.initialize.call(this, latlng, this.options);
         
             this.on("move", function() {
                 this._accMarker.setLatLng(this.getLatLng());
@@ -73,7 +83,7 @@
         setAccuracy: function(accuracy)	{
             this._accuracy = accuracy;
             if (!this._accMarker) {
-                this._accMarker = L.circle(this._latlng, accuracy).addTo(this._map);
+                this._accMarker = L.circle(this._latlng, accuracy, circleStyle).addTo(this._map);
             } else {
                 this._accMarker.setRadius(accuracy);
             }
@@ -88,35 +98,5 @@
 
     L.userMarker = function (latlng, options) {
         return new L.UserMarker(latlng, options);
-    };
-    
-    L.liveUserMarker = function(map, options) {
-        options = options || {};
-        if (typeof options.pulsing === "undefined")
-            options.pulsing = true;
-        
-        var marker = L.userMarker([0,0], options);
-        var added = false;
-        
-        var watchId = window.navigator.geolocation.watchPosition(function(pos) {
-            var coords = [pos.coords.latitude, pos.coords.longitude];
-            marker.setLatLng(coords);
-            marker.setAccuracy(pos.coords.accuracy);
-            if (!added) {
-                marker.addTo(map);
-                added = true;
-            }
-        }, function() {
-            if (options.geolocationError)
-                options.geolocationError.apply(marker, arguments);
-        }, {enableHighAccuracy:true});
-        
-        // remove handler
-        marker.on("remove", function() {
-            if (watchId)
-                window.navigator.geolocation.clearWatch(watchId);
-        });
-        
-        return marker;
     };
 })(window);

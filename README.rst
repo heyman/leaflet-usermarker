@@ -15,5 +15,5 @@ Examples
 
 Author
 ======
-Usermarker is developed by `Jonatan Heyman <http://heyman.info`_.
+Usermarker is developed by `Jonatan Heyman <http://heyman.info>`_.
 

@@ -17,3 +17,8 @@ Author
 ======
 Usermarker is developed by `Jonatan Heyman <http://heyman.info>`_.
 
+
+License
+=======
+
+MIT License

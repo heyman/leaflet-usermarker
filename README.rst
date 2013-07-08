@@ -2,11 +2,10 @@
 Leaflet UserMarker
 ==================
 
-UserMarker is a leaflet plugin for plotting the user, or multiple users, on a map.
+UserMarker is a leaflet plugin for plotting a marker representing a user, 
+or multiple users, on a map.
 
 .. image:: https://images.weserv.nl/?url=static.longitude.me/img/opengraph-image.jpg
-    :height: 500
-    :width: 500
     :alt: longitude.me
 
 

@@ -41,7 +41,7 @@
         $("#marker-add").click(function() {
             map.on("locationfound", function(location) {
                 if (!marker)
-                    marker = L.userMarker([0,0], {pulsing:true}).addTo(map);
+                    marker = L.userMarker(location.latlng, {pulsing:true}).addTo(map);
                 
                 marker.setLatLng(location.latlng);
                 marker.setAccuracy(location.accuracy);

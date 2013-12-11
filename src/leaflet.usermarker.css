@@ -26,6 +26,20 @@
         opacity: 0;
     }
 }
+@keyframes leaflet-usermarker-pulsate {
+    from {
+        transform: scale(0.5);
+        opacity: 1.0;
+    }
+    95% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    to {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
 
 .leaflet-usermarker,
 .leaflet-usermarker-small {
@@ -45,6 +59,7 @@
 
     -moz-animation: leaflet-usermarker-pulsate 1.5s ease-in-out infinite;
     -webkit-animation: leaflet-usermarker-pulsate 1.5s ease-in-out infinite;
+    animation: leaflet-usermarker-pulsate 1.5s ease-in-out infinite;
     border:1pt solid #fff;
     /* make a circle */
     -moz-border-radius:51px;

@@ -49,8 +49,8 @@
     background-size: 100%;
 }
 .leaflet-usermarker-small {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
 }
 
 .leaflet-usermarker i.pulse,
@@ -76,7 +76,7 @@
 }
 
 .leaflet-usermarker-small i.pulse {
-    height: 30px !important;
-    width: 30px !important;
+    height: 31px !important;
+    width: 31px !important;
     margin: -7px 0 0 -7px;
 }

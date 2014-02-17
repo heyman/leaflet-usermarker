@@ -23,8 +23,8 @@
     });
     
     var iconSmall = L.divIcon({
-        className: "leaflet-usermarker",
-        iconSize: [18, 18],
+        className: "leaflet-usermarker-small",
+        iconSize: [17, 17],
         iconAnchor: [9, 9],
         popupAnchor: [0, -10],
         labelAnchor: [11, -3],
@@ -32,7 +32,7 @@
     });
     var iconPulsingSmall = L.divIcon({
         className: "leaflet-usermarker-small",
-        iconSize: [18, 18],
+        iconSize: [17, 17],
         iconAnchor: [9, 9],
         popupAnchor: [0, -10],
         labelAnchor: [11, -3],
@@ -57,12 +57,7 @@
         initialize: function(latlng, options) {
             options = L.Util.setOptions(this, options);
             
-            if (this.options.smallIcon) {
-                this.options.icon = (options.pulsing ? iconPulsingSmall : iconSmall);
-            } else {
-                this.options.icon = (options.pulsing ? iconPulsing : icon);
-            }
-            
+            this.setPulsing(this.options.pulsing);
             this._accMarker = L.circle(latlng, this.options.accuracy, circleStyle);
         
             // call super
@@ -77,7 +72,12 @@
     
         setPulsing: function(pulsing) {
             this._pulsing = pulsing;
-            this.setIcon(!!this._pulsing ? iconPulsing : icon);
+            
+            if (this.options.smallIcon) {
+                this.setIcon(!!this._pulsing ? iconPulsingSmall : iconSmall);
+            } else {
+                this.setIcon(!!this._pulsing ? iconPulsing : icon);
+            }
         },
     
         setAccuracy: function(accuracy)	{

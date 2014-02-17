@@ -25,7 +25,7 @@
     </div>
     <a href="https://github.com/heyman/leaflet-usermarker"><img style="position:absolute; top:0; right:0; border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
     
-     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
     <script src="../src/leaflet.usermarker.js"></script>
     <script>
@@ -68,7 +68,7 @@
         // manually positioned marker
         var manualMarker = null;
         $("#manual-marker-add").click(function() {
-            manualMarker = L.userMarker([5, 70]);
+            manualMarker = L.userMarker([5, 70], {smallIcon:false});
             manualMarker.addTo(map);
         });
         $("#manual-marker-remove").click(function() {
@@ -80,6 +80,7 @@
         $("#manual-marker-accuracy").click(function() {
             if (manualMarker) {
                 manualMarker.setAccuracy(1500000);
+                //manualMarker.setPulsing(true);
             }
         });
     </script>

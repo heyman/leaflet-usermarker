@@ -27,7 +27,7 @@
         iconSize: [17, 17],
         iconAnchor: [9, 9],
         popupAnchor: [0, -10],
-        labelAnchor: [11, -3],
+        labelAnchor: [3, -4],
         html: ''
     });
     var iconPulsingSmall = L.divIcon({
@@ -35,7 +35,7 @@
         iconSize: [17, 17],
         iconAnchor: [9, 9],
         popupAnchor: [0, -10],
-        labelAnchor: [11, -3],
+        labelAnchor: [3, -4],
         html: '<i class="pulse"></i>'
     });
     var circleStyle = {

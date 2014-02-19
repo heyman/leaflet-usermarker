@@ -77,7 +77,13 @@ Example Code
 Author
 ======
 
-Usermarker is developed by `Jonatan Heyman <http://heyman.info>`_.
+Usermarker is developed by `Jonatan Heyman <http://heyman.info>`_. 
+
+Another website of mine is `boutiquehotel.me <http://boutiquehotel.me>`_, which is a site for 
+finding great `boutique hotels <http://boutiquehotel.me>`_ all around the world. For example, 
+check out boutique hotels in `Stockholm <http://boutiquehotel.me/stockholm/>`_, 
+`London <http://boutiquehotel.me/london/>`_, `New York <http://boutiquehotel.me/new-york/>`_, 
+or `Berlin <http://boutiquehotel.me/berlin/>`_.
 
 
 License

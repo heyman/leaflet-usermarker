@@ -44,6 +44,7 @@
         weight: 3,
         opacity: 0.5,
         fillOpacity: 0.15,
+        fillColor: "#03f",
         clickable: false
     };
 
@@ -51,14 +52,15 @@
         options: {
             pulsing: false,
             smallIcon: false,
-            accuracy: 0
+            accuracy: 0,
+            circleOpts: circleStyle
         },
 
         initialize: function(latlng, options) {
             options = L.Util.setOptions(this, options);
             
             this.setPulsing(this.options.pulsing);
-            this._accMarker = L.circle(latlng, this.options.accuracy, circleStyle);
+            this._accMarker = L.circle(latlng, this.options.accuracy, this.options.circleOpts);
         
             // call super
             L.Marker.prototype.initialize.call(this, latlng, this.options);
@@ -83,7 +85,7 @@
         setAccuracy: function(accuracy)	{
             this._accuracy = accuracy;
             if (!this._accMarker) {
-                this._accMarker = L.circle(this._latlng, accuracy, circleStyle).addTo(this._map);
+                this._accMarker = L.circle(this._latlng, accuracy, this.options.circleOpts).addTo(this._map);
             } else {
                 this._accMarker.setRadius(accuracy);
             }

@@ -31,8 +31,8 @@
     <script>
         // initialize map
         var map = L.map('map').setView([38, 0], 2);
-        L.tileLayer('http://{s}.tile.cloudmade.com/70146506bc514228adc1756788c730d3/997/256/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>',
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 18
         }).addTo(map);
         

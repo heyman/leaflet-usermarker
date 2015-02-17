@@ -1,0 +1,26 @@
+{
+  "name": "leaflet-usermarker",
+  "version": "1.0.0",
+  "description": "Leaflet plugin for plotting a marker representing a user, or multiple users, on a Leaflet map ",
+  "main": "src/leaflet.usermarker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heyman/leaflet-usermarker.git"
+  },
+  "keywords": [
+    "maps",
+    "leaflet",
+    "map",
+    "gis",
+    "geocode"
+  ],
+  "author": "Jonatan Heyman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heyman/leaflet-usermarker/issues"
+  },
+  "homepage": "https://github.com/heyman/leaflet-usermarker"
+}

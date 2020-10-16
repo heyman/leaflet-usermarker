@@ -11,15 +11,16 @@
         iconAnchor: [17, 17],
         popupAnchor: [0, -20],
         labelAnchor: [11, -3],
-        html: ''
+        html: '<i class="inner"></i>'
     });
+    
     var iconPulsing = L.divIcon({
         className: "leaflet-usermarker",
         iconSize: [34, 34],
         iconAnchor: [17, 17],
         popupAnchor: [0, -20],
         labelAnchor: [11, -3],
-        html: '<i class="pulse"></i>'
+        html: '<i class="inner"></i><i class="pulse"></i>'
     });
     
     var iconSmall = L.divIcon({
@@ -28,7 +29,7 @@
         iconAnchor: [9, 9],
         popupAnchor: [0, -10],
         labelAnchor: [3, -4],
-        html: ''
+        html: '<i class="inner"></i>'
     });
     var iconPulsingSmall = L.divIcon({
         className: "leaflet-usermarker-small",
@@ -36,14 +37,14 @@
         iconAnchor: [9, 9],
         popupAnchor: [0, -10],
         labelAnchor: [3, -4],
-        html: '<i class="pulse"></i>'
+        html: '<i class="inner"></i><i class="pulse"></i>'
     });
     var circleStyle = {
         stroke: true,
         color: "#03f",
-        weight: 3,
+        weight: 1,
         opacity: 0.5,
-        fillOpacity: 0.15,
+        fillOpacity: 0.10,
         fillColor: "#03f",
         clickable: false
     };

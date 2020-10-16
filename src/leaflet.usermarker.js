@@ -1,5 +1,5 @@
 /**
- * Leaflet.UserMarker v1.0
+ * Leaflet.UserMarker v1.1
  * 
  * Author: Jonatan Heyman <http://heyman.info>
  */

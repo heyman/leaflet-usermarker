@@ -1,6 +1,6 @@
 {
   "name": "leaflet-usermarker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Leaflet plugin for plotting a marker representing a user, or multiple users, on a Leaflet map ",
   "main": "src/leaflet.usermarker.js",
   "scripts": {

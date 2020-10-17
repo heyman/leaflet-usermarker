@@ -13,7 +13,7 @@ Features
 ========
 
 Leaflet UserMarker is an iOS style marker for representing users on a map. It 
-extends Leaflet's `Marker <http://leafletjs.com/reference.html#marker>`_ class, 
+extends Leaflet's `Marker <https://leafletjs.com/reference.html#marker>`_ class, 
 so everything you can do with a normal marker - like setting lat/lng and binding 
 popups - can be done with UserMarker's as well. In addition to this, UserMarker 
 has the following features:
@@ -27,7 +27,7 @@ has the following features:
 See it in action
 ================
 
-Leaflet UserMarker can be seen in action on `Longitude.me <http://longitude.me>`_.
+Leaflet UserMarker can be seen in action on `Longitude.me <https://longitude.me>`_.
 
 You can also see the `bundled examples <http://heyman.github.com/leaflet-usermarker/example/>`_.
 
@@ -79,11 +79,11 @@ Author
 
 Usermarker is developed by `Jonatan Heyman <http://heyman.info>`_. 
 
-Another website of mine is `boutiquehotel.me <http://boutiquehotel.me>`_, which is a site for 
-finding great `boutique hotels <http://boutiquehotel.me>`_ all around the world. For example, 
-check out boutique hotels in `Stockholm <http://boutiquehotel.me/stockholm/>`_, 
-`London <http://boutiquehotel.me/london/>`_, `New York <http://boutiquehotel.me/new-york/>`_, 
-or `Berlin <http://boutiquehotel.me/berlin/>`_.
+Another website of mine is `boutiquehotel.me <https://boutiquehotel.me>`_, which is a site for 
+finding great `boutique hotels <https://boutiquehotel.me>`_ all around the world. For example, 
+check out boutique hotels in `Stockholm <https://boutiquehotel.me/stockholm/>`_, 
+`London <https://boutiquehotel.me/london/>`_, `New York <https://boutiquehotel.me/new-york/>`_, 
+or `Berlin <https://boutiquehotel.me/berlin/>`_.
 
 
 License

@@ -27,9 +27,10 @@ has the following features:
 See it in action
 ================
 
-Leaflet UserMarker can be seen in action on `Longitude.me <https://longitude.me>`_.
+Leaflet UserMarker can be seen in action on `Longitude.me <https://longitude.me>`_ and 
+`What is my address? <https://whatismyaddress.net>`
 
-You can also see the `bundled examples <http://heyman.github.com/leaflet-usermarker/example/>`_.
+You can also see the `bundled examples <https://heyman.github.com/leaflet-usermarker/example/>`_.
 
 
 Example Code

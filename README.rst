@@ -28,7 +28,7 @@ See it in action
 ================
 
 Leaflet UserMarker can be seen in action on `Longitude.me <https://longitude.me>`_ and 
-`What is my address? <https://whatismyaddress.net>`
+`What is my address? <https://whatismyaddress.net>`_
 
 You can also see the `bundled examples <https://heyman.github.com/leaflet-usermarker/example/>`_.
 
